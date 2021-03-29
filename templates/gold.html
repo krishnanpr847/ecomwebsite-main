@@ -1,0 +1,320 @@
+<!doctype html> {% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Home</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">KRISH</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">Aboutus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contactme</a>
+                </li>
+
+
+
+
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <br>
+        <p class="text-center">
+            <h1>Divya Jewels</h1>
+        </p>
+        <hr> {%for e in product%}
+        <div class="row">
+            <div class="col-md-3">
+                <figure class="card card-product">
+                    <div class="img-wrap"><img width="255" height="300" src="{{e.images}}">
+                        <a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Quick view</a>
+                    </div>
+                    <figcaption class="info-wrap">
+                        <h6 class="title text-dots"><a href="#">{{e.product_name}}</a></h6>
+                        <div class="action-wrap">
+                            <a href="/mail" class="btn btn-primary btn-sm float-right"> Order </a>
+                            <div class="price-wrap h5">
+                                <span class="price-new">{{e.price}}</span>
+                            </div>
+                            <!-- price-wrap.// -->
+                        </div>
+                        <!-- action-wrap -->
+                    </figcaption>
+                </figure>
+                <!-- card // -->
+            </div>
+            <!-- col // -->
+            <div class="col-md-3">
+                <figure class="card card-product">
+                    <div class="img-wrap"><img width="255" height="300" src="{% static 'images\jewel2.jpg' %}">
+                        <a class="btn-overlay" href=""><i class="fa fa-search-plus"></i> Quick view</a>
+                    </div>
+                    <figcaption class="info-wrap">
+                        <h6 class="title text-dots"><a href="#">{{e.product_name}}</a></h6>
+                        <div class="action-wrap">
+                            <a href="/mail" class="btn btn-primary btn-sm float-right"> Order </a>
+                            <div class="price-wrap h5">
+                                <span class="price-new">$280</span>
+                            </div>
+                            <!-- price-wrap.// -->
+                        </div>
+                        <!-- action-wrap -->
+                    </figcaption>
+                </figure>
+
+                <!-- card // -->
+            </div>
+            <!-- col // -->
+            <div class="col-md-3">
+
+                <figure class="card card-product">
+                    <div class="img-wrap"><img width="255" height="300" src="{% static 'images\jewel3.jpg' %}">
+                        <a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Quick view</a>
+                    </div>
+                    <figcaption class="info-wrap">
+                        <h6 class="title text-dots"><a href="#">Name of product</a></h6>
+                        <div class="action-wrap">
+                            <a href="/mail" class="btn btn-primary btn-sm float-right"> Order </a>
+                            <div class="price-wrap h5">
+                                <span class="price-new">$280</span>
+                            </div>
+                            <!-- price-wrap.// -->
+                        </div>
+                        <!-- action-wrap -->
+                    </figcaption>
+                </figure>
+                <!-- card // -->
+            </div>
+            <div class="col-md-3">
+
+                <figure class="card card-product">
+                    <div class="img-wrap"><img width="255" height="300" src="{% static 'images\jewel3.jpg' %}">
+                        <a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Quick view</a>
+                    </div>
+                    <figcaption class="info-wrap">
+                        <h6 class="title text-dots"><a href="#">Name of product</a></h6>
+                        <div class="action-wrap">
+                            <a href="/mail" class="btn btn-primary btn-sm float-right"> Order </a>
+                            <div class="price-wrap h5">
+                                <span class="price-new">$280</span>
+                            </div>
+                            <!-- price-wrap.// -->
+                        </div>
+                        <!-- action-wrap -->
+                    </figcaption>
+                </figure>
+                <!-- card // -->
+            </div>
+            <div class="col-md-3">
+
+                <figure class="card card-product">
+                    <div class="img-wrap"><img width="255" height="300" src="{% static 'images\jewel3.jpg' %}">
+                        <a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Quick view</a>
+                    </div>
+                    <figcaption class="info-wrap">
+                        <h6 class="title text-dots"><a href="#">Name of product</a></h6>
+                        <div class="action-wrap">
+                            <a href="/mail" class="btn btn-primary btn-sm float-right"> Order </a>
+                            <div class="price-wrap h5">
+                                <span class="price-new">$280</span>
+                            </div>
+                            <!-- price-wrap.// -->
+                        </div>
+                        <!-- action-wrap -->
+                    </figcaption>
+                </figure>
+                <!-- card // -->
+            </div>
+            <div class="col-md-3">
+
+                <figure class="card card-product">
+                    <div class="img-wrap"><img width="255" height="300" src="{% static 'images\jewel3.jpg' %}">
+                        <a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Quick view</a>
+                    </div>
+                    <figcaption class="info-wrap">
+                        <h6 class="title text-dots"><a href="#">Name of product</a></h6>
+                        <div class="action-wrap">
+                            <a href="/mail" class="btn btn-primary btn-sm float-right"> Order </a>
+                            <div class="price-wrap h5">
+                                <span class="price-new">$280</span>
+                            </div>
+                            <!-- price-wrap.// -->
+                        </div>
+                        <!-- action-wrap -->
+                    </figcaption>
+                </figure>
+                <!-- card // -->
+            </div>
+            <div class="col-md-3">
+
+                <figure class="card card-product">
+                    <div class="img-wrap"><img width="255" height="300" src="{% static 'images\jewel3.jpg' %}">
+                        <a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Quick view</a>
+                    </div>
+                    <figcaption class="info-wrap">
+                        <h6 class="title text-dots"><a href="#">Name of product</a></h6>
+                        <div class="action-wrap">
+                            <a href="/mail" class="btn btn-primary btn-sm float-right"> Order </a>
+                            <div class="price-wrap h5">
+                                <span class="price-new">$280</span>
+                            </div>
+                            <!-- price-wrap.// -->
+                        </div>
+                        <!-- action-wrap -->
+                    </figcaption>
+                </figure>
+                <!-- card // -->
+            </div>
+            <div class="col-md-3">
+
+                <figure class="card card-product">
+                    <div class="img-wrap"><img width="255" height="300" src="{% static 'images\jewel3.jpg' %}">
+                        <a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Quick view</a>
+                    </div>
+                    <figcaption class="info-wrap">
+                        <h6 class="title text-dots"><a href="#">Name of product</a></h6>
+                        <div class="action-wrap">
+                            <a href="/mail" class="btn btn-primary btn-sm float-right"> Order </a>
+                            <div class="price-wrap h5">
+                                <span class="price-new">$280</span>
+                            </div>
+                            <!-- price-wrap.// -->
+                        </div>
+                        <!-- action-wrap -->
+                    </figcaption>
+                </figure>
+                <!-- card // -->
+            </div>
+            <div class="col-md-3">
+
+                <figure class="card card-product">
+                    <div class="img-wrap"><img width="255" height="300" src="{% static 'images\jewel3.jpg' %}">
+                        <a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Quick view</a>
+                    </div>
+                    <figcaption class="info-wrap">
+                        <h6 class="title text-dots"><a href="#">Name of product</a></h6>
+                        <div class="action-wrap">
+                            <a href="/mail" class="btn btn-primary btn-sm float-right"> Order </a>
+                            <div class="price-wrap h5">
+                                <span class="price-new">$280</span>
+                            </div>
+                            <!-- price-wrap.// -->
+                        </div>
+                        <!-- action-wrap -->
+                    </figcaption>
+                </figure>
+                <!-- card // -->
+            </div>
+            <div class="col-md-3">
+
+                <figure class="card card-product">
+                    <div class="img-wrap"><img width="255" height="300" src="{% static 'images\jewel3.jpg' %}">
+                        <a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Quick view</a>
+                    </div>
+                    <figcaption class="info-wrap">
+                        <h6 class="title text-dots"><a href="#">Name of product</a></h6>
+                        <div class="action-wrap">
+                            <a href="/mail" class="btn btn-primary btn-sm float-right"> Order </a>
+                            <div class="price-wrap h5">
+                                <span class="price-new">$280</span>
+                            </div>
+                            <!-- price-wrap.// -->
+                        </div>
+                        <!-- action-wrap -->
+                    </figcaption>
+                </figure>
+                <!-- card // -->
+            </div>
+
+            <div class="col-md-3">
+
+                <figure class="card card-product">
+                    <div class="img-wrap"><img width="255" height="300" src="{% static 'images\jewel3.jpg' %}">
+                        <a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Quick view</a>
+                    </div>
+                    <figcaption class="info-wrap">
+                        <h6 class="title text-dots"><a href="#">Name of product</a></h6>
+                        <div class="action-wrap">
+                            <a href="/mail" class="btn btn-primary btn-sm float-right"> Order </a>
+                            <div class="price-wrap h5">
+                                <span class="price-new">$280</span>
+                            </div>
+                            <!-- price-wrap.// -->
+                        </div>
+                        <!-- action-wrap -->
+                    </figcaption>
+                </figure>
+                <!-- card // -->
+            </div>
+            <!-- col // -->
+            <div class="col-md-3">
+                <figure class="card card-product">
+                    <div class="img-wrap"> <img width="255" height="300" src="{% static 'images\jewel4.jpg' %}">
+                        <a class="btn-overlay" href="#"><i class="fa fa-search-plus"></i> Quick view</a>
+                    </div>
+                    <figcaption class="info-wrap">
+                        <h6 class="title text-dots"><a href="#">The name of product</a></h6>
+                        <div class="action-wrap">
+                            <a href="/mail" class="btn btn-primary btn-sm float-right"> Order </a>
+                            <div class="price-wrap h5">
+                                <span class="price-new">$280</span>
+                            </div>
+                            <!-- price-wrap.// -->
+                        </div>
+                        <!-- action-wrap -->
+                    </figcaption>
+                </figure>
+                <!-- card // -->
+            </div>
+            <!-- col // -->
+        </div>
+        <!-- row.// -->
+
+
+    </div>
+    {%endfor%}
+
+    <!--container end-->
+
+    <br><br><br>
+    <article class="bg-secondary mb-3">
+        <div class="card-body text-center">
+            <h4 class="text-black">Divya Jewels <br> For contact call "87666780968" </h4>
+            <p class="h5 text-white"> We have all jewels as per your choices</p> <br>
+            <p><a class="btn btn-warning" target="_blank" href="http://divyajewels.com/"> DivyaJewels.com
+                    <i class="fa fa-window-restore "></i></a></p>
+        </div>
+        <br><br><br>
+    </article>
+
+</body>
+
+</html>

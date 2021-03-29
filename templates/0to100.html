@@ -1,0 +1,175 @@
+<!DOCTYPE html> {%load static%}
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- filter Section link -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/css/tether.min.css'>
+    <link rel="stylesheet" href="{% static 'filtersidebar/css/style.css' %}">
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="{% static 'filtersidebar/css/demo.css' %}">
+    <style>
+        body {
+            background: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <a class="navbar-brand" href="#" style="margin-left:3em;">Divya Jewels</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+
+
+                <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+
+
+        </div>
+
+    </nav>
+    <!-- Sidebar -->
+    <div id="wrapper">
+        <div class="overlay"></div>
+
+
+        <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <div class="sidebar-header">
+                    <div class="sidebar-brand">
+                        <a href="#">Filter</a></div>
+                </div>
+
+                <li class="dropdown">
+                    <a href="#works" class="dropdown-toggle" data-toggle="dropdown">Price <span class="caret"></span></a>
+                    <ul class="dropdown-menu animated fadeInLeft" role="menu">
+
+                        <li><a href="{%url 'index'%}">0 to 100</a></li>
+                        <li><a href="#videos">100 to 300</a></li>
+                        <li><a href="#books">300 to 500</a></li>
+                        <li><a href="#art">500 to 700</a></li>
+                        <li><a href="#awards">Above 700</a></li>
+
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#works" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+                    <ul class="dropdown-menu animated fadeInLeft" role="menu">
+
+                        <li><a href="#pictures">Pictures</a></li>
+                        <li><a href="#videos">Videos</a></li>
+                        <li><a href="#books">Books</a></li>
+                        <li><a href="#art">Art</a></li>
+                        <li><a href="#awards">Awards</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#works" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+                    <ul class="dropdown-menu animated fadeInLeft" role="menu">
+
+                        <li><a href="#pictures">Pictures</a></li>
+                        <li><a href="#videos">Videeos</a></li>
+                        <li><a href="#books">Books</a></li>
+                        <li><a href="#art">Art</a></li>
+                        <li><a href="#awards">Awards</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas" style=" margin-top: -1em;">
+                <span class="hamb-top" style="background-color: white;"></span>
+    			<span class="hamb-middle" style="background-color: white;"></span>
+				<span class="hamb-bottom" style="background-color: white;"></span>
+            </button>
+            <div class="container">
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+    <!-- partial -->
+
+
+
+
+    <div class="container mt-5">
+
+
+        <div class="row">
+            {% for e in product%}
+            <div class="col-md-3">
+                <figure class="card card-product">
+                    <div class="img-wrap">
+                        <img width="208" height="270" src="{{e.images.url}}">
+                        <a class="btn-overlay" href="/productview/{{e.product_name}}"><i class="fa fa-search-plus"></i> Quick view</a>
+                    </div>
+                    <figcaption class="info-wrap">
+                        <h6 class="title text-dots"><a href="#">{{e.product_name}}</a></h6>
+
+                        <div class="action-wrap">
+                            <a href="/order" class="btn btn-primary btn-sm float-right"> Order </a>
+                            <div class="price-wrap h5">
+                                <span class="price-new">${{e.price}}</span>
+                                <del class="price-old"></del>
+                            </div>
+                            <!-- price-wrap.// -->
+                        </div>
+                        <!-- action-wrap -->
+                    </figcaption>
+                </figure>
+                <!-- card // -->
+            </div>
+            {%endfor%}
+            <!-- filter js -->
+            <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+            <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.4/js/tether.min.js'></script>
+            <script src="{% static 'filtersidebar/js/script.js' %}"></script>
+            <script>
+                function filter() {
+                    console.log(clicked)
+                }
+            </script>
+</body>
+
+</html>
